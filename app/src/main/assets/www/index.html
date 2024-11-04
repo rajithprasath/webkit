@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebView Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #responseArea {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 50px;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>WebView Loaded</h1>
+</header>
+
+<button id="showToastButton">Show Toast from Native</button> <!-- Button to trigger data fetch -->
+
+<button id="fetchButton">Fetch Data</button> <!-- Button to trigger data fetch -->
+
+<div id="responseArea"> <!-- Area to display the response -->
+    <p id="text"></p> <!-- Text to show the response -->
+</div>
+
+<script src="script.js" type="text/javascript"></script> <!-- Include your JavaScript file -->
+</body>
+</html>
