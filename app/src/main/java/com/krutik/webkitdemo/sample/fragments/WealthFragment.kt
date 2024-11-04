@@ -39,7 +39,6 @@ class WealthFragment : Fragment() {
 
         // Observe route changes
         sharedViewModel.route.observe(viewLifecycleOwner) { route ->
-            println("testing nav native to js 88888" + route)
             // Load the route in the WebView
             binding.webView.loadUrl("file:///android_asset/web/pbdemo-build/index.html#$route")
         }
@@ -54,18 +53,15 @@ class WealthFragment : Fragment() {
 
         binding.webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
-                println("testing 1111  + " + url)
                 return super.shouldOverrideUrlLoading(view, url)
             }
 
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 bridge?.init()
-                println("testing 222  + " + url)
             }
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                println("testing 333  + " + url)
                 pageLoaded = true
             }
 

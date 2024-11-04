@@ -75,16 +75,13 @@ class MainActivity : AppCompatActivity() {
         })
 
         sharedViewModel.index.observe(this) { index ->
-            println("testing nav native to js 88888" + index)
           navigateToTab(index)
         }
     }
 
     // Method to navigate to a specific tab
     fun navigateToTab(index: Int) {
-        println("testing nav 6666 with route:" + index)
         runOnUiThread {
-            println("testing nav 6666 with route: $index")
             binding.viewPager.currentItem = index
         }
     }
